@@ -11,3 +11,7 @@ angular.module('newusersApp', [])
         redirectTo: '/'
       });
   });
+
+angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E']).run(function($httpBackend) {
+  $httpBackend.whenGET('/user').respond({'id':'1', 'name':'Léo Tarik'});
+});
