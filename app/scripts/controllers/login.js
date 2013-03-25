@@ -3,7 +3,7 @@ var LoginController = function($scope, $http) {
     $scope.login.user = null;
 
     $scope.login.connect = function() {
-        $http.post('http://localhost:3000/users/me?callback=JSON_CALLBACK').success(function(data, status) {
+        $http.post('/users/me?callback=JSON_CALLBACK').success(function(data, status) {
             // despite its name, this callback is triggered even in case of an error, so we have to take care
             if (status < 200 || status >= 300)
                 return;
