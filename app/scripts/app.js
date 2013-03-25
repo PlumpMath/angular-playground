@@ -1,24 +1,21 @@
 'use strict';
 
-// Fixtures
-var login = {"id":1,"name":"Léo Tarik"};
+var newusersApp = angular.module('newusersApp', []);
 
-// App
-var app = angular.module('newusersApp', []);
+newusersApp.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {
+      templateUrl: 'main.html',
+      controller: 'MainCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+}]);
 
-// Setup fake backend
-angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E']).run(function($httpBackend) {
-  $httpBackend.whenJSONP('/users/me?callback=JSON_CALLBACK').respond(login);
-});
+var newusersAppDev = angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E']);
+newusersAppDev.run(function($httpBackend) {
+  $httpBackend.whenGET(/\.html$/).passThrough();
 
-// Routes
-app.config(function ($routeProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
+  var user = {id: 1, name: 'Léo Tarik'};
+  $httpBackend.whenPOST('/users/me').respond(user);
 });
