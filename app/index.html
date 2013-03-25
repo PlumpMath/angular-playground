@@ -29,7 +29,7 @@
         <ul class="nav">
           <li class="active"><a href="#">Home</a></li>
         </ul>
-        <div class="pull-right" ng-controller="UserCtrl">{{user.name}}</div></div>
+        <div class="pull-right" ng-include src="'views/login.html'"></div>
       </div>
     </div>
     <div class="container" ng-view>
@@ -45,6 +45,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/user.js"></script>
+    <script src="scripts/controllers/login.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

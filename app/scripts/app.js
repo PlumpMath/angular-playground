@@ -1,17 +1,21 @@
 'use strict';
 
-angular.module('newusersApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+var newusersApp = angular.module('newusersApp', []);
 
-angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E']).run(function($httpBackend) {
-  $httpBackend.whenGET('/user').respond({'id':'1', 'name':'Léo Tarik'});
+newusersApp.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {
+      templateUrl: 'main.html',
+      controller: 'MainCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+}]);
+
+var newusersAppDev = angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E']);
+newusersAppDev.run(function($httpBackend) {
+  $httpBackend.whenGET(/\.html$/).passThrough();
+
+  var user = {id: 1, name: 'Léo Tarik'};
+  $httpBackend.whenPOST('/users/me').respond(user);
 });
