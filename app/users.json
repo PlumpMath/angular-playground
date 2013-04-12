@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "firstname": "Vincent",
+        "lastname": "Hellot",
+        "email": "vincent@tigerlilyapps.com"
+    },
+    {
+        "id": 2,
+        "firstname": "Flavien",
+        "lastname": "Cogez",
+        "email": "flavien@tigerlilyapps.com"
+    },
+    {
+        "id": 1,
+        "firstname": "Alain",
+        "lastname": "Xandre",
+        "email": "alain@tigerlilyapps.com"
+    }
+]
