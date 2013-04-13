@@ -1,6 +1,6 @@
-var LoginController = function($scope, $http) {
+var LoginController = function($scope, $http, $cookieStore) {
     $scope.login = {};
-    $scope.login.user = null;
+    $scope.login.user = $cookieStore.get('users_session');
 
     $scope.login.connect = function() {
         $http.post('/users/me').success(function(data, status) {
@@ -8,11 +8,13 @@ var LoginController = function($scope, $http) {
             if (status < 200 || status >= 300)
                 return;
             $scope.login.user = data;
+            $cookieStore.put('users_session', data);
         });
     };
 
     $scope.login.disconnect = function() {
         $scope.login.user = null;
+        $cookieStore.remove('users_session');
     };
 
     // For the future
