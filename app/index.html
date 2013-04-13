@@ -27,7 +27,10 @@
       <div class="navbar-inner">
         <a class="brand" href="#">Tigerlily</a>
         <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
+          <li ng-class="{active: location.path() == '/'}"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav">
+          <li ng-class="{active: location.path() == '/users'}"><a href="#/users">Users</a></li>
         </ul>
         <div class="pull-right" ng-include src="'views/login.html'"></div>
       </div>

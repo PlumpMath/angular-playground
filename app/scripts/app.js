@@ -17,11 +17,13 @@ newusersApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 var newusersAppDev = angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E', 'ngCookies']);
-newusersAppDev.run(function($httpBackend) {
+newusersAppDev.run(function($httpBackend, $rootScope, $location) {
     $httpBackend.whenGET(/\.html$/).passThrough();
     $httpBackend.whenGET(/\.json$/).passThrough();
     $httpBackend.whenGET('/users').passThrough();
 
     var user = { id: 1, name: 'Julien', email: 'julien@tigerlilyapps.com' };
     $httpBackend.whenPOST('/users/me').respond(user);
+
+    $rootScope.location = $location;
 });
