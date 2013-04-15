@@ -10,7 +10,7 @@ var UserListCtrl = function($scope, $http) {
     };
 
     $scope.isOpen = function(user){
-        return $scope.opened === user;
+        return $scope.opened && $scope.opened.id === user.id;
     };
 
     $scope.anyItemOpen = function() {

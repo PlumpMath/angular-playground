@@ -8,8 +8,8 @@
     <div class="span2">
       <!--Sidebar content-->
       <div class="row-fluid">
-        <ul class="nav nav-tabs nav-stacked span">
-          <li ng-repeat="user in users | filter:query">
+        <ul class="nav nav-pills nav-stacked">
+          <li ng-repeat="user in users | filter:query" ng-class="{active: isOpen(user)}">
             <a href="" ng:click="open(user)">{{user.firstname}} {{user.lastname}}</a>
           </li>
         </ul>
