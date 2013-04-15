@@ -1,17 +1,24 @@
-<div class="row-fluid">
-  <div class="span2" ng-controller="UserListCtrl">
-    <!--Sidebar content-->
-    <div ng-repeat="user in users" class="well">
-      {{user.firstname}} {{user.lastname}}
-    </div>
+<div class="container-fluid" ng-controller="UserListCtrl">
+  <div class="row-fluid">
+    <input type="text" ng-model="query">
+    <span class="span9"></span>
   </div>
-  <div class="span10">
-    <!--Body content-->
-    <ul class="users">
-      <!-- <li ng-repeat="user in users"> -->
-      <!--   {{user.name}} -->
-      <!--   <p>{{user.email}}</p> -->
-      <!-- </li> -->
-    </ul>
+
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+      <div class="row-fluid">
+        <ul class="nav nav-tabs nav-stacked span">
+          <li ng-repeat="user in users | filter:query">
+            <a href="" ng:click="open(user)">{{user.firstname}} {{user.lastname}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="span10">
+      <!--Body content-->
+      <div ng-include src="'views/detail.html'"></div>
+    </div>
   </div>
 </div>
