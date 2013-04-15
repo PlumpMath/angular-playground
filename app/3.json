@@ -1,0 +1,40 @@
+{
+    "id": 3,
+    "firstname": "Alain",
+    "lastname": "Xandre",
+    "email": "alain@tigerlilyapps.com",
+    "picture": "http://www.tigerlilyapps.com/images/member/alexandre-d877a211.jpg",
+    "activities":
+    [
+        {
+            "id": 7,
+            "service": "twitter",
+            "type": "mention",
+            "object_id": "abc456"
+        },
+        {
+            "id": 8,
+            "service": "twitter",
+            "type": "direct_message",
+            "object_id": "654ert"
+        },
+        {
+            "id": 9,
+            "service": "facebook",
+            "type": "quiz_answer",
+            "object_id": "ppl"
+        },
+        {
+            "id": 10,
+            "service": "shop",
+            "type": "promocode",
+            "object_id": "1E7GZ"
+        },
+        {
+            "id": 11,
+            "service": "shop",
+            "type": "cart",
+            "object_id": "18END97C"
+        }
+    ]
+}

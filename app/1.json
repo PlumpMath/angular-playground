@@ -1,0 +1,28 @@
+{
+    "id": 1,
+    "firstname": "Vincent",
+    "lastname": "Hellot",
+    "email": "vincent@tigerlilyapps.com",
+    "picture": "http://www.tigerlilyapps.com/images/member/vincent-ee906330.jpg",
+    "activities":
+    [
+        {
+            "id": 1,
+            "service": "twitter",
+            "type": "retweet",
+            "object_id": "123456"
+        },
+        {
+            "id": 2,
+            "service": "facebook",
+            "type": "comment",
+            "object_id": "654321"
+        },
+        {
+            "id": 3,
+            "service": "shop",
+            "type": "signup",
+            "object_id": "abc"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "id": 2,
+    "firstname": "Flavien",
+    "lastname": "Cogez",
+    "email": "flavien@tigerlilyapps.com",
+    "picture": "http://www.tigerlilyapps.com/images/member/flavien-7ba48b78.jpg",
+    "activities":
+    [
+        {
+            "id": 4,
+            "service": "facebook",
+            "type": "like",
+            "object_id": "444456"
+        },
+        {
+            "id": 5,
+            "service": "facebook",
+            "type": "comment",
+            "object_id": "654777"
+        },
+        {
+            "id": 6,
+            "service": "shop",
+            "type": "newsletter",
+            "object_id": "def"
+        }
+    ]
+}
