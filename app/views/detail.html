@@ -1,35 +1,35 @@
 <ng-switch on="anyItemOpen()">
   <div ng-switch-when="true">
     <div ng-controller="UserDetailCtrl">
-      <div class="well">
+      <div class="hero-unit">
         <div class="row">
           <span class="span2"></span>
           <span class="span4">
-            <label>Name:</label>
             {{opened.firstname}} {{opened.lastname}}
-            <label>Email:</label>
             {{opened.email}}
           </span>
           <span class="span4"><img src={{opened.picture}} class="img-rounded"></span>
         </div>
       </div>
 
-      <ul class="activities">
-        <div class="row">
-          <legend>Activities:</legend>
-        </div>
-
-        <div ng-repeat="activity in opened.activities" class="well">
+      <div class="hero-unit">
+        <ul class="activities">
           <div class="row">
-            <div class="span2"></div>
-            <div class="span1">
-              <span>{{activity.service}}</span>
-              <span>{{activity.type}}</span>
-              <span>{{activity.object_id}}</span>
+            <legend>Activities:</legend>
+          </div>
+
+          <div ng-repeat="activity in opened.activities" class="well">
+            <div class="row">
+              <div class="span2"></div>
+              <div class="span1">
+                <span>{{activity.service}}</span>
+                <span>{{activity.type}}</span>
+                <span>{{activity.object_id}}</span>
+              </div>
             </div>
           </div>
-        </div>
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </ng-switch>
