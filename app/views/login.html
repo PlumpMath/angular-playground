@@ -5,15 +5,15 @@
         <legend>Login</legend>
         <p><input ng-model="login.login" name="email" type="text" placeholder="Login" required /></p>
         <p><input ng-model="login.password" name="password" type="password" placeholder="Password" required /></p>
-        <p><button type="submit">Login</button></p>
+        <p><button id="login" type="submit">Login</button></p>
       </fieldset>
     </form>
   </div>
 
   <div ng-show="login.user">
     <div class="row">
-      <span class="span2">Welcome, {{login.user.name}}!</span>
-      <span class="span1"><button ng-click="login.disconnect()">Logout</button></span>
+      <span id="welcome_user" class="span2 navbar-text">Welcome, {{login.user.name}}!</span>
+      <span class="span1"><button id= "disconnect" class="btn" ng-click="login.disconnect()">Logout</button></span>
     </div>
   </div>
 </div>
