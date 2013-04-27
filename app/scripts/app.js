@@ -1,8 +1,8 @@
 'use strict';
 
-var newusersApp = angular.module('newusersApp', []);
+var usersApp = angular.module('usersApp', []);
 
-newusersApp.config(['$routeProvider', function($routeProvider) {
+usersApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
@@ -16,8 +16,8 @@ newusersApp.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
-var newusersAppDev = angular.module('newusersAppDev', ['newusersApp', 'ngMockE2E', 'ngCookies']);
-newusersAppDev.run(function($httpBackend, $rootScope, $location) {
+var usersAppDev = angular.module('usersAppDev', ['usersApp', 'ngMockE2E', 'ngCookies']);
+usersAppDev.run(function($httpBackend, $rootScope, $location) {
     $httpBackend.whenGET(/\.html$/).passThrough();
     $httpBackend.whenGET(/\.json$/).passThrough();
     $httpBackend.whenGET('/users').passThrough();
