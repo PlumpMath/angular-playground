@@ -3,7 +3,7 @@
     "firstname": "Flavien",
     "lastname": "Cogez",
     "email": "flavien@tigerlilyapps.com",
-    "picture": "http://www.tigerlilyapps.com/images/member/flavien-7ba48b78.jpg",
+    "picture": "http://d1kdhiucqht6l6.cloudfront.net/images/member/flavien-7ec85219.jpg",
     "activities":
     [
         {
@@ -24,5 +24,5 @@
             "type": "newsletter",
             "object_id": "def"
         }
-    ]
+    ];
 }

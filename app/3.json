@@ -3,7 +3,7 @@
     "firstname": "Alain",
     "lastname": "Xandre",
     "email": "alain@tigerlilyapps.com",
-    "picture": "http://www.tigerlilyapps.com/images/member/alexandre-d877a211.jpg",
+    "picture": "http://d1kdhiucqht6l6.cloudfront.net/images/member/alexandre-51985357.jpg",
     "activities":
     [
         {
@@ -36,5 +36,5 @@
             "type": "cart",
             "object_id": "18END97C"
         }
-    ]
+    ];
 }

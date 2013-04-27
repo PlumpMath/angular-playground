@@ -3,7 +3,7 @@
     "firstname": "Vincent",
     "lastname": "Hellot",
     "email": "vincent@tigerlilyapps.com",
-    "picture": "http://www.tigerlilyapps.com/images/member/vincent-ee906330.jpg",
+    "picture": "http://d1kdhiucqht6l6.cloudfront.net/images/member/vincent-26ef47bf.jpg",
     "activities":
     [
         {
@@ -24,5 +24,5 @@
             "type": "signup",
             "object_id": "abc"
         }
-    ]
+    ];
 }
