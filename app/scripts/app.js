@@ -17,6 +17,7 @@ usersApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 var usersAppDev = angular.module('usersAppDev', ['usersApp', 'ngMockE2E', 'ngCookies']);
+
 usersAppDev.run(function($httpBackend, $rootScope, $location) {
     $httpBackend.whenGET(/\.html$/).passThrough();
     $httpBackend.whenGET(/\.json$/).passThrough();
